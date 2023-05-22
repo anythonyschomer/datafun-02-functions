@@ -1,4 +1,4 @@
-from Band_tickets import Band_tickets
+from Band_tickets_class import Band_tickets
 
 from util_datafun_logger import setup_logger
 
