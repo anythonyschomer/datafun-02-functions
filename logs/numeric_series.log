@@ -1,0 +1,33 @@
+2023-05-21 19:28:17,173 =============================================================
+2023-05-21 19:28:17,173 =============================================================
+2023-05-21 19:28:17,173 Today is 2023-05-21 at 07:28 PM
+2023-05-21 19:28:17,197 This file is running on: nt Windows 10
+2023-05-21 19:28:17,197 The Python version is: 3.10.8
+2023-05-21 19:28:17,197 The active conda environment is:  None
+2023-05-21 19:28:17,197 The active pip environment is:    None
+2023-05-21 19:28:17,197 The active environment path is:   C:\Users\14029\miniconda3
+2023-05-21 19:28:17,197 The current working directory is: C:\Users\14029\Desktop\Data Analystics\datafun-02-functions-1
+2023-05-21 19:28:17,197 This source file is in:           c:\Users\14029\Desktop\Data Analystics\datafun-02-functions-1
+2023-05-21 19:28:17,197 =============================================================
+2023-05-21 19:28:17,197 =============================================================
+2023-05-21 19:28:17,197 Created: NumericSeries with name=Quiz Scores Module 1, units=pts, and 6 data points: [9, 9, 10, 9, 7, 10]
+2023-05-21 19:28:17,197 Created: NumericSeries with name=Quiz Scores Module 2, units=pts, and 8 data points: [8, 10, 8, 10, 8, 10, 10, 10]
+2023-05-21 19:28:17,197 Created: NumericSeries with name=Quiz Scores Module 3, units=pts, and 4 data points: [7, 8, 9, 10]
+2023-05-21 19:28:17,197 NumericSeries with name=Quiz Scores Module 1, units=pts, and 6 data points: [9, 9, 10, 9, 7, 10]
+2023-05-21 19:28:17,197 Count: 6
+2023-05-21 19:28:17,197 Sum: 54
+2023-05-21 19:28:17,197 Mean: 9.0
+2023-05-21 19:28:17,197 Median: 9.0
+2023-05-21 19:28:17,197 ------------------
+2023-05-21 19:28:17,197 NumericSeries with name=Quiz Scores Module 2, units=pts, and 8 data points: [8, 10, 8, 10, 8, 10, 10, 10]
+2023-05-21 19:28:17,197 Count: 8
+2023-05-21 19:28:17,197 Sum: 74
+2023-05-21 19:28:17,197 Mean: 9.25
+2023-05-21 19:28:17,197 Median: 10.0
+2023-05-21 19:28:17,197 ------------------
+2023-05-21 19:28:17,197 NumericSeries with name=Quiz Scores Module 3, units=pts, and 4 data points: [7, 8, 9, 10]
+2023-05-21 19:28:17,197 Count: 4
+2023-05-21 19:28:17,205 Sum: 34
+2023-05-21 19:28:17,205 Mean: 8.5
+2023-05-21 19:28:17,205 Median: 8.5
+2023-05-21 19:28:17,205 ------------------

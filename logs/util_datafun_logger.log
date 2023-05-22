@@ -1,0 +1,15 @@
+2023-05-21 19:29:20,067 =============================================================
+2023-05-21 19:29:20,067 =============================================================
+2023-05-21 19:29:20,067 Today is 2023-05-21 at 07:29 PM
+2023-05-21 19:29:20,087 This file is running on: nt Windows 10
+2023-05-21 19:29:20,088 The Python version is: 3.10.8
+2023-05-21 19:29:20,088 The active conda environment is:  None
+2023-05-21 19:29:20,088 The active pip environment is:    None
+2023-05-21 19:29:20,088 The active environment path is:   C:\Users\14029\miniconda3
+2023-05-21 19:29:20,088 The current working directory is: C:\Users\14029\Desktop\Data Analystics\datafun-02-functions-1
+2023-05-21 19:29:20,089 This source file is in:           c:\Users\14029\Desktop\Data Analystics\datafun-02-functions-1
+2023-05-21 19:29:20,089 =============================================================
+2023-05-21 19:29:20,089 =============================================================
+2023-05-21 19:29:20,089 Starting util_datafun_logger.py
+2023-05-21 19:29:20,089 Information is logged to: logs/logs\util_datafun_logger.log
+2023-05-21 19:29:20,089 Ending util_datafun_logger.py
