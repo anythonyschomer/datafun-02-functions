@@ -1,123 +1,67 @@
 """
-Purpose: Illustrate the math module and how to write
-defensive functions by trying them, 
-and if things don't work provide a custom message.
-
-Use try / except / finally whenever a valid function could cause an error
-e.g.,
-- a number is not valid such as a negative radius or age
-- a string is empty or missing
-- the requested resouce could not be found
-
-The math module includes:
-- pi
-- sin/cos/tan
-- factorial
-- sqrt for square root
-- cbrt (in 3.11) for cube root
-- comb(n,k) for combinations i.e.,
-    number of ways to choose k items from n items
-    w/out repetition and w/out order
-- perm(n,k) for permuations i.e.,
-    number of ways to choose k items from n items
-    w/out repetition and With order
-
-@ uses math module - for some advanced math
-
+Purpose: Use the Math Module to create some Functions regarding ticket sales for Live Music
+Author: Anythony Schomer
+Function 1 - Calculate the ticket sale differential between two bands.
+Function 2 - Calculate the total amount of band lineup combinations for a show. 
+Function 3 - Find the total amount of tickets sold. 
 """
 
+#Import the Math module
 import math
 
+#Setting up the logger
 from util_datafun_logger import setup_logger
 logger, logname = setup_logger(__file__)
 
+#Function 1 - Find the difference of ticket sales for one band vs another band
+#Defining the function
+def find_ticket_difference_amount(band1_tickets, band2_tickets):
 
+    #Creating a variable that calculates the differance between two teams scores.
+    ticket_differential = band1_tickets - band2_tickets
+    logger.info(f"The ticket differential for the show is {ticket_differential}")
+    return ticket_differential
 
-def get_circle_area_given_radius(radius):
-    """
-    Return area of a circle given the radius.
+#Running Function 1
+#Showing that it works for positive values (Tickets for a show)
+find_ticket_difference_amount(50, 10)
+#Showing that it works for negative values (Less tickets sold, less interest in the band)
+find_ticket_difference_amount(5, 15)
+#Showing that it works when people want to see the same band equally
+find_ticket_difference_amount(20, 20)
 
-    @param radius: the radius of the circle
-    @return: the area of the circle
-    @raise Exception: if radius is not a number
+#Function 2 - Calculate the total amount of band lineup combinations for a show.
+#Defining the function
+def total_lineup_combinations(diff_bands):
 
-    """
+    #Creating a variable that calculates the total starting lineup combinations for a basketball team (From the total, choose 5 starters)
+    total_combos = math.comb(diff_bands,5)
+    logger.info(f"The total number of combinations for the band lineup is {total_combos}")
+    return total_combos
 
-    # Use a try / except / finally block when something 
-    # could go wrong
-    logger.info(f"CALLING get_circle_area({radius})")
+#Test Running Function 2
+total_lineup_combinations(10)
+total_lineup_combinations(15)
+total_lineup_combinations(5)
 
-    try: 
-        area = 2 * math.pi * radius
-        logger.info(f"The circle area is {area}")
-        return area
-    except Exception as ex:
-        logger.error(f"Error: {ex}")
-        return None
+#Function 3 - Find the total amount of tickets sold. 
+#Defining the function
+def total_points_scored(band1_show, band2_show, band3__show):
 
+    #Creating a variable that calculates the total points scored for a team
+    total_tickets_sold = band1_show + band2_show + band3__show
+    logger.info(f"The total number of tickets sold was {total_tickets_sold}")
+    return total_tickets_sold
 
-def get_circle_areas_given_list(radius_list):
-    """
-    This function should return a list with the areas of each circle
+#Test Running Function 3
+total_tickets_sold_3bands: (10, 15, 5)
+total_tickets_sold_3bands: (25, 35, 20)
 
-    Keyword arguments:
-    radius_list -- a list of radius values (items may be invalid)
-    """
-    logger.info(f"CALLING get_circle_area({radius_list})")
+#Logging info as required in task 3.1
+logger.info("Explore some functions in the math module")
+logger.info(f"math.comb(5,1) = {math.comb(5,1)}")
+logger.info(f"math.perm(5,1) = {math.perm(5,1)}")
 
-    if len(radius_list) == 0:
-        logger.error("Please add some items to the list. Nothing to do.")
-        quit() # quit the program
-
-    area_list = [] # empty list to hold the areas
-
-    # for every element in the list passed in 
-    for r in radius_list:
-
-        try:
-            area = get_circle_area_given_radius(r)
-            logger.info(f"r = {r}, area={area}")
-            area_list.append(area)
-
-        except Exception as ex:
-            logger.error(f"radius = {r}, Error: {ex}")
-
-
-# -------------------------------------------------------------
-# Call some functions and execute code!
-
-# This is very standard Python - it means
-# "If this module is the one being executed, i.e., the main module"
-# Literally: "if this module name == the name of the main running module"
-# (as opposed to being imported by another module like we do the logger),
-# then, follow these instructions.
-if __name__ == "__main__":
-
-    logger.info("Explore some functions in the math module")
-    logger.info(f"math.comb(5,1) = {math.comb(5,1)}")
-    logger.info(f"math.perm(5,1) = {math.perm(5,1)}")
-    logger.info(f"math.comb(5,3) = {math.comb(5,3)}")
-    logger.info(f"math.perm(5,3) = {math.perm(5,3)}")
-    logger.info(f"math.pi = {math.pi}")
-    logger.info(f"math.degrees(2 * math.pi) = {math.degrees(2 * math.pi)}")
-    logger.info(f"math.radians(180)         = {math.radians(180)}")
-    logger.info("")
-
-    logger.info("TRY: Call get_circle_area_given_radius() function with a different values.")
-    get_circle_area_given_radius(5)
-    get_circle_area_given_radius(-16)
-    get_circle_area_given_radius(math.inf)
-    get_circle_area_given_radius('five')
-    logger.info("")
-
-    logger.info("TRY: Call get_circle_areas_given_list() function with a list of GOOD values")
-    good_list = [5, 10, 25, 30, 45, 50]
-    get_circle_areas_given_list(good_list)
-    logger.info("")
-
-
-    logger.info("TRY: Call get_circle_areas_given_list() function with a list that may include BAD values")
-    bad_list = [-5, 0, math.inf, '30']
-    get_circle_areas_given_list(bad_list)
-
-    print("Done. Please check the log file for more details.")
+# Print the logged information
+with open(logname, 'r') as file_wrapper:
+    print(file_wrapper.read())
